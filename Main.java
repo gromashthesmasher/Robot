@@ -1,4 +1,4 @@
-package Robot;
+import prompt;
 
 import java.sql.Time;
 import java.util.Scanner;

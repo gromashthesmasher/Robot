@@ -1,6 +1,11 @@
 import java.awt.event.*;
+import java.util.Random;
+import java.util.Scanner;
 import java.awt.*;
 import javax.swing.*;
+import Scene;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Test extends JFrame implements ActionListener{
 
@@ -9,7 +14,9 @@ public class Test extends JFrame implements ActionListener{
     static JTextArea ta;
     static JButton b;
     static JButton b2;
-    static Scene st;
+    static String journal;
+    static String[] optionList;
+    static int n;
 
     Test(){}
 
@@ -37,7 +44,7 @@ public class Test extends JFrame implements ActionListener{
         b2.addActionListener(te);
 
         // setting frame size
-        f.setBounds(3,4,600,600);
+        f.setBounds(5,6,1500,1000);
 
         //adding things to the panel
         p.add(ta);
@@ -59,11 +66,38 @@ public class Test extends JFrame implements ActionListener{
         String s = e.getActionCommand();
         if (s.equals("Submit")) {
             ta.setText("don't eat my butt");
+            n++;
         }
         else if (s.equals("Next Prompt")) {
- 
-            st = new Scene();
-            st.print("mango","Aladin","steam-punk","recreational","rescipt","hello");
+            if(n ==0){
+                ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
+            }
+            else if (n == 1){
+                ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
+            }
+           // ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
         }
+    }
+    public int randInt(){
+        Random rand = new Random();
+        int randInt = rand.nextInt(6);
+        return randInt;
+    }
+    public String selection(String option1, String option2, String option3, String option4, String option5, String option6){
+        int hello = this.randInt();
+        optionList = new String[6];
+        optionList[0] = option1;
+        optionList[1] = option2;
+        optionList[2] = option3;
+        optionList[3] = option4;
+        optionList[4] = option5;
+        optionList[5] = option6;
+
+        for(int i = 0; i < 6; i++){
+            if(hello == i){
+                return optionList[i];
+            }
+        }
+        return "fuck you";
     }
 }
