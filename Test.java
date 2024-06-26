@@ -73,7 +73,7 @@ public class Test extends JFrame implements ActionListener{
                 ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
             }
             else if (n == 1){
-                ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
+                ta.setText(selection("coco butter","fool","cool","camo","butts again","farts"));
             }
            // ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
         }
