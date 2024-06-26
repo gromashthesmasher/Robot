@@ -1,4 +1,4 @@
-package lifecyclerpg;
+package Robot.*;
 import java.util.Scanner;
 import java.util.Random;
 public class Scene {
