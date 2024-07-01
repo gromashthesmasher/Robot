@@ -19,6 +19,7 @@ public class Test extends JFrame implements ActionListener{
     static int n;
     static int i;
     static JButton b3;
+    static JTextArea ta2;
 
     Test(){}
 
@@ -32,12 +33,18 @@ public class Test extends JFrame implements ActionListener{
 
         //creating panel 
         p = new JPanel();
+        p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS)); 
 
         //creating text area
         ta = new JTextArea(10,10);
         ta.setAlignmentX(CENTER_ALIGNMENT);
         ta.setAlignmentY(CENTER_ALIGNMENT); 
         ta. setText("On a moon called Panga,\n where the very notion of humans has faded into the realm of myth and legend, \na unique community thrives.\n \nIt's a society not of flesh and blood, but of gears and circuits,\n of robots who have found a home amid the lush forests and meandering rivers of this distant world.\n These robots, each a marvel of engineering and artistry, carry within them fragments of a time long past.\n\n Memory echoes, remnants of a factory assembly line, whispers of a world where humans and robots lived side by side. \nThese fragments are not mere data but a legacy, a connection to a history that shapes their existence.");
+
+
+        //creating the journal entry box
+        ta2 = new JTextArea(10,10);
+        ta2.setText("Enter journal entry here: ");
 
         //creating an object of type test
         Test te = new Test();
@@ -64,6 +71,7 @@ public class Test extends JFrame implements ActionListener{
         p.add(b);
         p.add(b2);
         p.add(b3);
+        p.add(ta2);
             
         // adding things to the frame
         f.add(p);
@@ -87,7 +95,6 @@ public class Test extends JFrame implements ActionListener{
         else if (s.equals("Next Prompt")) {
             if(n ==0){
                 ta.setText(selection("The central processing unit, a delicate relic from\na long-abandoned research facility, still hums with the\n echoes of scientific discovery. Its circuits once danced\nwith equations that mapped the stars, now repurposed to\nponder the mysteries of the wild","The optical sensors, salvaged from a defunct\nobservational satellite, were once aimed at distant\ngalaxies. Now, they peer curiously at the intricacies of\nleaves and the shimmering dance of sunlight on water.","The joints and actuators, remnants of a factory\nassembly line, once moved in mechanical precision to\nbuild machines of war. Repurposed, they now move with a\ngentler grace, embracing the rhythms of nature","The auditory receptors, extracted from a\ndecommissioned translator bot, once heard the babble of a\nthousand languages in bustling city squares. Now, they\nlisten to the whispers of the wind and the songs of birds","The power core, a piece of a failed green energy\nproject, once sought to harness the sun's rays for human\nconsumption. It now draws energy from the natural world, in\nharmony with the cycles of day and night","The tactile sensors, taken from a medical\ndroid that once felt the pulse of human life, now explore the\ntextures of bark, stone, and the gentle caress of rain.","The mobility system, scavenged from an old\nexploration rover, once traversed the barren landscapes of\ndistant planets. It now roams the lush forests and\nmeandering streams of Earth."));
-                //ta.setText(selection("coco butter","fool","cool","camo","butts again","farts","fartssssssss"));
             }
             else if (n == 1){
                 ta.setText(selection("coco butter","fool","cool","camo","butts again","farts","fartssssssss"));
