@@ -86,8 +86,8 @@ public class Test extends JFrame implements ActionListener{
         }
         else if (s.equals("Next Prompt")) {
             if(n ==0){
-                //ta.setText(selection("The central processing unit, a delicate relic from\na long-abandoned research facility, still hums with the\n echoes of scientific discovery. Its circuits once danced\nwith equations that mapped the stars, now repurposed to\nponder the mysteries of the wild","The optical sensors, salvaged from a defunct\nobservational satellite, were once aimed at distant\ngalaxies. Now, they peer curiously at the intricacies of\nleaves and the shimmering dance of sunlight on water.","The joints and actuators, remnants of a factory\nassembly line, once moved in mechanical precision to\nbuild machines of war. Repurposed, they now move with a\ngentler grace, embracing the rhythms of nature","The auditory receptors, extracted from a\ndecommissioned translator bot, once heard the babble of a\nthousand languages in bustling city squares. Now, they\nlisten to the whispers of the wind and the songs of birds","The power core, a piece of a failed green energy\nproject, once sought to harness the sun's rays for human\nconsumption. It now draws energy from the natural world, in\nharmony with the cycles of day and night","The tactile sensors, taken from a medical\ndroid that once felt the pulse of human life, now explore the\ntextures of bark, stone, and the gentle caress of rain.","The mobility system, scavenged from an old\nexploration rover, once traversed the barren landscapes of\ndistant planets. It now roams the lush forests and\nmeandering streams of Earth."));
-                ta.setText(selection("coco butter","fool","cool","camo","butts again","farts","fartssssssss"));
+                ta.setText(selection("The central processing unit, a delicate relic from\na long-abandoned research facility, still hums with the\n echoes of scientific discovery. Its circuits once danced\nwith equations that mapped the stars, now repurposed to\nponder the mysteries of the wild","The optical sensors, salvaged from a defunct\nobservational satellite, were once aimed at distant\ngalaxies. Now, they peer curiously at the intricacies of\nleaves and the shimmering dance of sunlight on water.","The joints and actuators, remnants of a factory\nassembly line, once moved in mechanical precision to\nbuild machines of war. Repurposed, they now move with a\ngentler grace, embracing the rhythms of nature","The auditory receptors, extracted from a\ndecommissioned translator bot, once heard the babble of a\nthousand languages in bustling city squares. Now, they\nlisten to the whispers of the wind and the songs of birds","The power core, a piece of a failed green energy\nproject, once sought to harness the sun's rays for human\nconsumption. It now draws energy from the natural world, in\nharmony with the cycles of day and night","The tactile sensors, taken from a medical\ndroid that once felt the pulse of human life, now explore the\ntextures of bark, stone, and the gentle caress of rain.","The mobility system, scavenged from an old\nexploration rover, once traversed the barren landscapes of\ndistant planets. It now roams the lush forests and\nmeandering streams of Earth."));
+                //ta.setText(selection("coco butter","fool","cool","camo","butts again","farts","fartssssssss"));
             }
             else if (n == 1){
                 ta.setText(selection("coco butter","fool","cool","camo","butts again","farts","fartssssssss"));
@@ -117,7 +117,7 @@ public class Test extends JFrame implements ActionListener{
     }
     public String selection(String option1, String option2, String option3, String option4, String option5, String option6, String option7){
         int hello = this.randInt();
-        optionList = new String[6];
+        optionList = new String[7];
         optionList[0] = option1;
         optionList[1] = option2;
         optionList[2] = option3;
