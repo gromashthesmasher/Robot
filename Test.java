@@ -18,6 +18,7 @@ public class Test extends JFrame implements ActionListener{
     static String[] optionList;
     static int n;
     static int i;
+    static int x;
     static JButton b3;
     static JTextArea ta2;
     static JButton b4;
@@ -28,6 +29,9 @@ public class Test extends JFrame implements ActionListener{
 
         // setting the story counter to 0
         i =0;
+        n= 0;
+        x = 0;
+
        
         // creating frame
         f = new JFrame("Robot RPG");
@@ -94,7 +98,7 @@ public class Test extends JFrame implements ActionListener{
     {
         //saving and displaying user text
         String s = e.getActionCommand();
-        if (s.equals("Submit")) {
+        /*if (s.equals("Submit")) {
             ta.setText("don't eat my butt");
             n++;
         }
@@ -121,11 +125,10 @@ public class Test extends JFrame implements ActionListener{
 
             }
            // ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
-        }
-        else if (s.equals("Next")){
+        }*/
+        if (s.equals("Next")){
             if(i ==0){
                 ta.setText("In Panga, the robots have embraced a life in harmony with nature. \nThey are not mere observers but participants, each one a nature-fascinated individual with its own personality, its own purpose, its own path. \nThey learn from the trees, the animals,the very soil underfoot. They explore and ponder, they create  and nurture, they watch and wait.\nIt's not unheard of for one of these robots to wander off to study remote cave formations for hundreds of years or to spend a lifetime observing the subtle dance of a single leaf. \nTime, as humans once measured it, has little meaning here. What matters is the journey, the exploration, the endless quest for understanding.");
-        
             }
             else if(i == 1){
                 ta.setText("It's not unheard of for one of these robots to wander off to study remote cave formations for hundreds of years or to spend a lifetime observing the subtle dance of a single leaf. \nTime, as humans once measured it, has little meaning here. \nWhat matters is the journey, the exploration, the endless quest or understanding.");
@@ -141,9 +144,9 @@ public class Test extends JFrame implements ActionListener{
             }
             i++;
         }
-        else if(s.equals("Start")){
-            ta.setText("Welcome to your life. Press the prompt button to recieve your first prompts!");
-        }
+        //else if(s.equals("Start")){
+        //    ta.setText("Welcome to your life. Press the prompt button to recieve your first prompts!");
+       // }
     }
     public String selection(String option1, String option2, String option3, String option4, String option5, String option6, String option7){
         int hello = this.randInt();
