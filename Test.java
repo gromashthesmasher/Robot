@@ -20,6 +20,7 @@ public class Test extends JFrame implements ActionListener{
     static int i;
     static JButton b3;
     static JTextArea ta2;
+    static JButton b4;
 
     Test(){}
 
@@ -63,6 +64,11 @@ public class Test extends JFrame implements ActionListener{
         b3 = new JButton("Next");
         b3.addActionListener(te);
 
+        // creating button 4
+        b4 = new JButton("start");
+        b4.setVisible(false);
+
+
         // setting frame size
         f.setBounds(3,4,1500,1000);
 
@@ -94,10 +100,25 @@ public class Test extends JFrame implements ActionListener{
         }
         else if (s.equals("Next Prompt")) {
             if(n ==0){
-                ta.setText(selection("The central processing unit, a delicate relic from\na long-abandoned research facility, still hums with the\n echoes of scientific discovery. Its circuits once danced\nwith equations that mapped the stars, now repurposed to\nponder the mysteries of the wild","The optical sensors, salvaged from a defunct\nobservational satellite, were once aimed at distant\ngalaxies. Now, they peer curiously at the intricacies of\nleaves and the shimmering dance of sunlight on water.","The joints and actuators, remnants of a factory\nassembly line, once moved in mechanical precision to\nbuild machines of war. Repurposed, they now move with a\ngentler grace, embracing the rhythms of nature","The auditory receptors, extracted from a\ndecommissioned translator bot, once heard the babble of a\nthousand languages in bustling city squares. Now, they\nlisten to the whispers of the wind and the songs of birds","The power core, a piece of a failed green energy\nproject, once sought to harness the sun's rays for human\nconsumption. It now draws energy from the natural world, in\nharmony with the cycles of day and night","The tactile sensors, taken from a medical\ndroid that once felt the pulse of human life, now explore the\ntextures of bark, stone, and the gentle caress of rain.","The mobility system, scavenged from an old\nexploration rover, once traversed the barren landscapes of\ndistant planets. It now roams the lush forests and\nmeandering streams of Earth."));
+                ta.setText("This prompt describes the parts and remnants from which your Wild Built robot was constructed: "+ selection("The central processing unit, a delicate relic from\na long-abandoned research facility, still hums with the\n echoes of scientific discovery. Its circuits once danced\nwith equations that mapped the stars, now repurposed to\nponder the mysteries of the wild","The optical sensors, salvaged from a defunct\nobservational satellite, were once aimed at distant\ngalaxies. Now, they peer curiously at the intricacies of\nleaves and the shimmering dance of sunlight on water.","The joints and actuators, remnants of a factory\nassembly line, once moved in mechanical precision to\nbuild machines of war. Repurposed, they now move with a\ngentler grace, embracing the rhythms of nature","The auditory receptors, extracted from a\ndecommissioned translator bot, once heard the babble of a\nthousand languages in bustling city squares. Now, they\nlisten to the whispers of the wind and the songs of birds","The power core, a piece of a failed green energy\nproject, once sought to harness the sun's rays for human\nconsumption. It now draws energy from the natural world, in\nharmony with the cycles of day and night","The tactile sensors, taken from a medical\ndroid that once felt the pulse of human life, now explore the\ntextures of bark, stone, and the gentle caress of rain.","The mobility system, scavenged from an old\nexploration rover, once traversed the barren landscapes of\ndistant planets. It now roams the lush forests and\nmeandering streams of Earth."));
             }
             else if (n == 1){
-                ta.setText(selection("coco butter","fool","cool","camo","butts again","farts","fartssssssss"));
+                ta.setText("This represents your first sensations and observations, including the sight of somethingin nature that inspires your name."+ selection("The robot's first sight is a delicate butterfly, its wings a kaleidoscope of colors. It names itself \"Kaleidoscope Wing,\" a tribute to the beauty and complexity of life"," Awakening near a babbling brook, the robot is entranced by the water's endless flow. It takes the name\"Babbling Current,\" symbolizing its endless quest for knowledge.",": The robot's sensors first detect the scent of bloomingwildflowers. It names itself \"Blossom Scent,\" embracing the promise of growth and renewal","The robot's first sensation is the warmth of the sun on its metallic skin. It names itself \"Sunlit Embrace,\" a homage to the energy that fuels its existence.","The robot's first observation is a solitary tree, standing tall and resilient. It names itself \"Lone Sentinel,\" reflecting its own solitary journey."," The robot is first drawn to the intricate patterns of a spider's web, glistening with dew. It adopts the name \"Dewdrop Web,\" symbolizing the interconnectedness of all things","The robot's first sight is a shooting star, a fleeting moment of wonder. It names itself \"Stellar Glimpse,\" symbolizing the transient beauty of existence."));
+            else if(n==2){
+                ta.setText("This prompt describes the parts and remnants from which your Wild Built robot was constructed: "+ selection())
+
+            }
+            else if (n == 3){
+
+            }
+            else if(n==4){
+
+            }
+            else if (n==5){
+
+            }
+            else if(n==6){
+
             }
            // ta.setText(selection("butts","fool","cool","camo","butts again","farts"));
         }
@@ -116,10 +137,12 @@ public class Test extends JFrame implements ActionListener{
                 ta.setText("Welcome to Panga, where the forests whisper and the rivers sing, where robots live and learn, \nand where the adventure is yours to shape.\n\nWhat will you do?");
             }
             else if(i==4){
-                b2.setVisible(true);
-                b.setVisible(true);
+                b4.setVisible(true);
             }
             i++;
+        }
+        else if(s.equals("Start")){
+            ta.setText("Welcome to your life. Press the prompt button to recieve your first prompts!");
         }
     }
     public String selection(String option1, String option2, String option3, String option4, String option5, String option6, String option7){
